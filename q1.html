@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-
 <head>
+    <style>
+
+    </style>
 </head>
 
 <body>
     <h1>There are <x-daysleft></x-daysleft> day(s) left until PI Day (<x-piday></x-piday>).</h1>
 </body>
 <script>
+    // custom element for the number of days until pi day
     class DaysLeft extends HTMLElement{
         connectedCallback(){
             let today=new Date();
@@ -15,11 +18,12 @@
             let nDaysLeft = Math.ceil((nPiDay.getTime()-today.getTime())/(nSeconds));
             console.log(nDaysLeft); //logs the value we are looking for in our heading
             // put your "secret sauce here to get this in to the document
+            this.innerHTML = Math.ceil((nPiDay.getTime()-today.getTime())/(nSeconds));
         }
     }
-
     customElements.define("x-daysleft", DaysLeft);
 
+    // custom element to retrieve the date of pi day
     class PiDay extends HTMLElement{
         connectedCallback(){
             let today=new Date();
@@ -30,5 +34,4 @@
 
     customElements.define("x-piday", PiDay);
 </script>
-
 </html>

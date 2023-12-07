@@ -20,7 +20,8 @@
             let nDaysLeft = Math.ceil((nPiDay.getTime()-today.getTime())/(nSeconds));
             console.log(nDaysLeft); //logs the value we are looking for in our heading
             // put your "secret sauce here to get this in to the document
-            this.innerHTML = Math.ceil((nPiDay.getTime()-today.getTime())/(nSeconds));
+            this.innerHTML = nDaysLeft;
+
         }
     }
     customElements.define("x-daysleft", DaysLeft);

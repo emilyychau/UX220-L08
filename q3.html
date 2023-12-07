@@ -40,7 +40,12 @@
     </header>
     <main>
         <!-- TODO describe why this form will or will not work on the internet -->
-        <!-- This form will not work on the internet because -->
+
+        <!-- This form will not work on the internet because of the location that the action attribute points to.
+        The form responses point to the location of localhost:8000, set to a file that is local on the host’s computer; 
+        therefore it will not show up on the internet. If the action attribute was pointed towards a publicly accessible website, 
+        then it would work on the internet, given that the site hosting the form is also accessible. -->
+        
         <form action="localhost:8000" method="post">
             <div class="form-box">
                 <div class="form-group">

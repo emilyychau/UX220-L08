@@ -15,7 +15,7 @@
     class DaysLeft extends HTMLElement{
         connectedCallback(){
             let today=new Date();
-            let nPiDay=new Date(today.getFullYear(), 2, 14);
+            let nPiDay=new Date(today.getFullYear()+1, 2, 14);
             let nSeconds = 1000*60*60*24;
             let nDaysLeft = Math.ceil((nPiDay.getTime()-today.getTime())/(nSeconds));
             console.log(nDaysLeft); //logs the value we are looking for in our heading
@@ -29,11 +29,10 @@
     class PiDay extends HTMLElement{
         connectedCallback(){
             let today=new Date();
-            let nPiDay=new Date(today.getFullYear(), 2, 14);
+            let nPiDay=new Date(today.getFullYear()+1, 2, 14);
             this.innerHTML = nPiDay.toLocaleDateString('en-CA');
         }
     }
-
     customElements.define("x-piday", PiDay);
 </script>
 </html>

@@ -10,9 +10,19 @@
         h1{
             text-align: center;
         }
-        img {
-            align-items: right;
+        #col_left {
+            text-align: left;
+            color: #333;
+            width: 100%; 
+            padding-bottom: 30px;
+            padding-left: 20px
         }
+        #col_right{
+            float: right;
+            float: top;
+            padding-right: 20px;
+            padding-left:20px}
+        
     </style>
     <script src="custom.js"></script>
 </head>
@@ -21,10 +31,14 @@
         <h1>Tim Berners-Lee</h1>
     </header>
     <main>
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/210614211407-01-sir-tim-berners-lee-puts-original-world-wide-web-code-up-for-sale.jpg?q=w_1600,h_1075,x_0,y_0,c_fill" width="250px" alt="Photo of Tim Berners-Lee next to an old desktop computer">
-        <ul>Invention One</ul>
-        <ul>Invention Two</ul>
-        <ul>Invention Three</ul>
+        <div id="col_left">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/210614211407-01-sir-tim-berners-lee-puts-original-world-wide-web-code-up-for-sale.jpg?q=w_1600,h_1075,x_0,y_0,c_fill" width="250px" alt="Photo of Tim Berners-Lee next to an old desktop computer">
+        </div>
+        <div id="col_right">
+            <ul>Invention One</ul>
+            <ul>Invention Two</ul>
+            <ul>Invention Three</ul>
+        </div>
     </main>
     <footer>
         &copy; EC <x-year></x-year>

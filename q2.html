@@ -16,8 +16,13 @@
         .row {
             display: flex;
         }
-        .column {
-            flex: 40%;
+        .column-left {
+            flex: 30%;
+            float: left;
+        }
+        .column-right {
+            flex: 30%;
+            float: right;
         }
         footer{
             text-align: center;
@@ -31,7 +36,7 @@
     </header>
     <main>
         <div class="row">
-            <div class="column">
+            <div class="column-left">
                 <h2>Tim Berners-Lee Invented:</h2>
                 <ul>
                     <li>the Hypertext Transfer Protocol (HTTP)</li>
@@ -39,7 +44,7 @@
                     <li>the URL system</li>
                 </ul>
             </div>
-            <div class="column">
+            <div class="column-right">
                 <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">
                 <img src="https://media.cnn.com/api/v1/images/stellar/prod/210614211407-01-sir-tim-berners-lee-puts-original-world-wide-web-code-up-for-sale.jpg?q=w_1600,h_1075,x_0,y_0,c_fill" width="250px" alt="Photo of Tim Berners-Lee next to an old desktop computer"></a>
             </div>
